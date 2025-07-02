@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fastapi-mongo
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://madhumithavenkatachalam:<db_password>@cluster0.oyrzuku.mongodb.net/
+        fromDatabase:
+          name: your-service-env-vars
+          property: MONGO_URI

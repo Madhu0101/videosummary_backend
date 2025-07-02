@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 
 class MongoDBInspector:
-    def __init__(self, mongo_uri="mongodb://localhost:27017"):
+    def __init__(self, mongo_uri="mongodb+srv://madhumithavenkatachalam:Imi5U8cBclbBfbza@cluster0.oyrzuku.mongodb.net/"):
         self.client = AsyncIOMotorClient(mongo_uri)
         self.db = self.client["videosummary"]
         self.users_collection = self.db["users"]
